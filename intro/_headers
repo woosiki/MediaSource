@@ -1,3 +1,3 @@
 /*
   X-Frame-Options:
-  Content-Security-Policy: frame-ancestors https://www.canva.com https://*.canva.com;
+  Content-Security-Policy: frame-ancestors https://www.canva.com https://*.canva.com http://*.canva.site;
