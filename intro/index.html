@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Inline Video Player</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .video-container {
+      position: relative;
+      width: 720px;
+      max-width: 100%;
+    }
+
+    video {
+      width: 100%;
+      border-radius: 12px;
+    }
+
+    .play-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0,0,0,0.7);
+      color: white;
+      font-size: 18px;
+      padding: 12px 24px;
+      border-radius: 30px;
+      cursor: pointer;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="video-container">
+    <video id="player">
+      <source src="intro_11.mp4" type="video/mp4">
+    </video>
+
+    <button class="play-btn" onclick="playVideo()">               </button>
+  </div>
+
+  <script>
+    function playVideo() {
+      const video = document.getElementById("player");
+      video.play();
+      document.querySelector(".play-btn").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
